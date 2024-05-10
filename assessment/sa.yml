@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: assessment-ns
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: assessment-sa
+  namespace: assessment-ns

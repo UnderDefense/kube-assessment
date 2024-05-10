@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: assessment-read-cluster-binding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: assessment-read-cluster
+subjects:
+  - kind: ServiceAccount
+    name: assessment-sa
+    namespace: assessment-ns
